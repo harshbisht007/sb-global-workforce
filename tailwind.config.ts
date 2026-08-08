@@ -31,17 +31,17 @@ const config: Config = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          50: "#eef4ff",
-          100: "#d9e6ff",
-          200: "#bcd3ff",
-          300: "#8eb6ff",
-          400: "#598dff",
-          500: "#3563ff",
-          600: "#1d3ff5",
-          700: "#162ce1",
-          800: "#1827b6",
-          900: "#1a288f",
-          950: "#141a57",
+          50: "#ecfeff",
+          100: "#cffafe",
+          200: "#a5f3fc",
+          300: "#67e8f9",
+          400: "#22d3ee",
+          500: "#06b6d4",
+          600: "#0891b2",
+          700: "#0e7490",
+          800: "#155e75",
+          900: "#164e63",
+          950: "#083344",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -98,18 +98,18 @@ const config: Config = {
       boxShadow: {
         soft: "0 1px 2px rgba(10,17,36,0.04), 0 8px 24px rgba(10,17,36,0.06)",
         card: "0 4px 12px rgba(10,17,36,0.05), 0 24px 48px -16px rgba(10,17,36,0.12)",
-        glow: "0 0 0 1px rgba(53,99,255,0.08), 0 20px 50px -12px rgba(53,99,255,0.35)",
+        glow: "0 0 0 1px rgba(6,182,212,0.08), 0 20px 50px -12px rgba(6,182,212,0.35)",
         "inner-glow": "inset 0 1px 0 rgba(255,255,255,0.6)",
       },
       backgroundImage: {
         "grid-light":
           "linear-gradient(to right, rgba(10,17,36,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(10,17,36,0.04) 1px, transparent 1px)",
         "radial-fade":
-          "radial-gradient(60% 60% at 50% 0%, rgba(53,99,255,0.12) 0%, transparent 70%)",
+          "radial-gradient(60% 60% at 50% 0%, rgba(6,182,212,0.12) 0%, transparent 70%)",
         "hero-gradient":
-          "linear-gradient(135deg, #0a1124 0%, #141a57 55%, #1d3ff5 120%)",
+          "linear-gradient(135deg, #0a1124 0%, #14434f 55%, #0891b2 120%)",
         "brand-gradient":
-          "linear-gradient(135deg, #1d3ff5 0%, #598dff 100%)",
+          "linear-gradient(135deg, #0891b2 0%, #22d3ee 100%)",
       },
       keyframes: {
         "accordion-down": {

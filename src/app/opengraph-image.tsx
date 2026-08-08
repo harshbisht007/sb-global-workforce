@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
+import { ogLogoDataUri } from "./og-logo";
 
 export const runtime = "edge";
 export const alt = `${siteConfig.name} — ${siteConfig.tagline}`;
@@ -18,7 +19,7 @@ export default function OgImage() {
           justifyContent: "space-between",
           padding: "72px",
           background:
-            "linear-gradient(135deg, #0a1124 0%, #141a57 55%, #1d3ff5 120%)",
+            "linear-gradient(135deg, #0a1124 0%, #14434f 55%, #0891b2 120%)",
           color: "white",
           fontFamily: "sans-serif",
         }}
@@ -30,15 +31,21 @@ export default function OgImage() {
               width: "72px",
               height: "72px",
               borderRadius: "20px",
-              background: "linear-gradient(135deg, #1d3ff5, #598dff)",
+              background: "#ffffff",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "40px",
-              fontWeight: 800,
+              padding: "8px",
             }}
           >
-            🌐
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={ogLogoDataUri}
+              width={56}
+              height={56}
+              alt=""
+              style={{ objectFit: "contain" }}
+            />
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <span style={{ fontSize: "34px", fontWeight: 800 }}>

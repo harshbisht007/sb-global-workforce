@@ -54,12 +54,14 @@ export default function ContactPage() {
         <div className="mt-6 grid w-full max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
           {quick.map((q) => {
             const Inner = (
-              <div className="flex flex-col items-center gap-1 rounded-2xl border border-border bg-white/70 px-3 py-4 text-center shadow-soft backdrop-blur transition-colors hover:border-primary/30">
+              <div className="flex min-w-0 flex-col items-center gap-1 rounded-2xl border border-border bg-white/70 px-3 py-4 text-center shadow-soft backdrop-blur transition-colors hover:border-primary/30">
                 <q.icon className="size-5 text-primary" />
                 <span className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
                   {q.label}
                 </span>
-                <span className="text-xs font-medium text-ink">{q.value}</span>
+                <span className="w-full break-words text-xs font-medium text-ink">
+                  {q.value}
+                </span>
               </div>
             );
             return q.href ? (

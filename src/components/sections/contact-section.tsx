@@ -18,6 +18,7 @@ interface ContactSectionProps {
 export function ContactSection({ withHeading = true }: ContactSectionProps) {
   const { contact } = siteConfig;
   const addr = contact.address;
+  const emails = contact.email.split(",").map((e) => e.trim());
 
   const infoCards = [
     {
@@ -29,8 +30,8 @@ export function ContactSection({ withHeading = true }: ContactSectionProps) {
     {
       icon: Mail,
       label: "Email us",
-      lines: [contact.email],
-      hrefs: [`mailto:${contact.email}`],
+      lines: emails,
+      hrefs: emails.map((e) => `mailto:${e}`),
     },
     {
       icon: Clock,
@@ -72,20 +73,20 @@ export function ContactSection({ withHeading = true }: ContactSectionProps) {
                     <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                       {card.label}
                     </p>
-                    <div className="mt-1 flex flex-col gap-0.5">
+                    <div className="mt-1 flex min-w-0 flex-col gap-0.5">
                       {card.lines.map((line, i) =>
                         card.hrefs ? (
                           <a
                             key={line}
                             href={card.hrefs[i]}
-                            className="text-sm font-semibold text-ink transition-colors hover:text-primary-700"
+                            className="break-words text-sm font-semibold text-ink transition-colors hover:text-primary-700"
                           >
                             {line}
                           </a>
                         ) : (
                           <span
                             key={line}
-                            className="text-sm font-semibold text-ink"
+                            className="break-words text-sm font-semibold text-ink"
                           >
                             {line}
                           </span>

@@ -20,7 +20,7 @@ export const siteConfig = {
     phones: ["+91 9910504898", "+91 9810506898", "+91 6214413628"],
     primaryPhone: "+91 9910504898",
     whatsapp: "+91 9910504898",
-    email: "sbetkt@gmail.com",
+    email: "info@sbglobalworkforce.com, sbetkt@gmail.com",
     timing: "Mon – Sat · 10:00 AM – 7:00 PM IST",
     address: {
       line1: "3rd Floor, Sagar Complex",
@@ -31,10 +31,11 @@ export const siteConfig = {
       postalCode: "842004",
       country: "India",
     },
-    // Generic embed centred on Muzaffarpur — no API key required.
+    // Embed centred on the office's exact coordinates — no API key required.
     mapEmbed:
-      "https://www.google.com/maps?q=Muzaffarpur%2C%20Bihar%20842004&output=embed",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Muzaffarpur+Bihar+842004",
+      "https://www.google.com/maps?q=26.1720181,85.3932419&output=embed",
+    mapLink:
+      "https://www.google.com/maps/place/26%C2%B010'19.3%22N+85%C2%B023'35.7%22E/@26.1720181,85.390667,17z",
   },
 
   socials: {

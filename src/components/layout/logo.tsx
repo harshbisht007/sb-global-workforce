@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Globe2 } from "lucide-react";
 
 interface LogoProps {
   className?: string;
@@ -14,9 +14,15 @@ export function Logo({ className, light = false }: LogoProps) {
       aria-label="S.B. Global Workforce — home"
       className={cn("group flex items-center gap-2.5", className)}
     >
-      <span className="relative flex size-10 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-glow transition-transform duration-300 group-hover:scale-105">
-        <Globe2 className="size-5" strokeWidth={2.25} />
-        <span className="absolute -right-0.5 -top-0.5 size-2.5 rounded-full bg-accent ring-2 ring-white" />
+      <span className="relative flex size-11 shrink-0 items-center justify-center rounded-2xl bg-white p-1.5 shadow-glow ring-1 ring-black/5 transition-transform duration-300 group-hover:scale-105">
+        <Image
+          src="/logo-mark.png"
+          alt=""
+          width={80}
+          height={80}
+          className="h-full w-full object-contain"
+          priority
+        />
       </span>
       <span className="flex flex-col leading-none">
         <span

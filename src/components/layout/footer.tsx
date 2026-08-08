@@ -91,12 +91,17 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Mail className="mt-0.5 size-4 shrink-0 text-primary-300" />
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="transition-colors hover:text-white"
-                >
-                  {contact.email}
-                </a>
+                <span className="flex min-w-0 flex-col gap-1">
+                  {contact.email.split(",").map((e) => e.trim()).map((e) => (
+                    <a
+                      key={e}
+                      href={`mailto:${e}`}
+                      className="break-words transition-colors hover:text-white"
+                    >
+                      {e}
+                    </a>
+                  ))}
+                </span>
               </li>
               <li className="flex gap-3">
                 <Clock className="mt-0.5 size-4 shrink-0 text-primary-300" />
