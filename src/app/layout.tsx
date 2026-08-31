@@ -94,9 +94,9 @@ export default function RootLayout({
           Skip to content
         </a>
 
-        <Navbar />
+        {/* <Navbar /> */}
         <main id="main">{children}</main>
-        <Footer />
+        {/* <Footer /> */}
 
         <WhatsAppButton />
         <ScrollToTop />
