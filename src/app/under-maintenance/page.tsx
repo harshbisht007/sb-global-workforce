@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 export default function MaintenancePage() {
   const { contact } = siteConfig;
-  const primaryEmail = contact.email.split(",")[0].trim();
+  const primaryEmail = contact.email.split(",")[1].trim();
   return (
     <main className="flex min-h-screen items-center justify-center bg-secondary/40 px-4">
       {" "}
